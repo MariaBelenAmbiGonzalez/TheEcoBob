@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         bottom_animation = AnimationUtils.loadAnimation(this,R.anim.botton_animation);
 
         //Hooks
-        image = findViewById(R.id.imageView2);
+        image = findViewById(R.id.imageView);
         logo = findViewById(R.id.Logo);
         slogan = findViewById(R.id.Slogan);
 

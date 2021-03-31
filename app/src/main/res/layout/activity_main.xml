@@ -8,59 +8,49 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/Logo"
-        android:layout_width="247dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="316dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/bangers"
         android:text="THE ECO BOB"
         android:textAlignment="center"
         android:textColor="#3AA8AA"
-        android:textSize="50sp"
+        android:textSize="70sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Slogan"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/Slogan"
-        android:layout_width="316dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/antic"
+        android:layout_width="375dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/bangers"
         android:text="ACOMPAÑAME A CUIDAR MI HOGAR"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+        app:layout_constraintTop_toBottomOf="@+id/Logo"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="348dp"
-        android:layout_height="569dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView"
+        android:layout_width="224dp"
+        android:layout_height="408dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="@drawable/theecobob" />
+        app:srcCompat="@drawable/theecobobanim" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
