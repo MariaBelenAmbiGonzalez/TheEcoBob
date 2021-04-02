@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332097567980",
+    "project_id": "boobieproject-26e01",
+    "storage_bucket": "boobieproject-26e01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332097567980:android:739701875c92fa783f39c9",
+        "android_client_info": {
+          "package_name": "com.example.theecobob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332097567980-0r86ettvq5tf78umnukit4fjq8f773gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK1YyXGm0CMFvDFOaWfYlUj5Hv7HXbEBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332097567980-0r86ettvq5tf78umnukit4fjq8f773gl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
