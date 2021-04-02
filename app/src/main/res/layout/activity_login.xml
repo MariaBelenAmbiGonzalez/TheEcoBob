@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/contraseña"
             android:hint="Contraseña"
-            android:transitionName="contraseña_tran"
+            android:transitionName="password_tran"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 

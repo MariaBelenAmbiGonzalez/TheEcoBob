@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Registrate para comenzar a reciclar!"
         android:textSize="14dp"
-        android:transitionName="slogan_tran" />
+        android:transitionName="logo_desc" />
 
     <LinearLayout
 
@@ -41,14 +41,13 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nombre"
+            android:id="@+id/reg_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre completo">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/reg_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
@@ -56,7 +55,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/reg_username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,21 +65,20 @@
             app:counterMaxLength="15">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/reg_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/correo"
+            android:id="@+id/reg_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/reg_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -88,14 +86,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/numeroTelf"
+            android:id="@+id/reg_phoneNo"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Número de móvil">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/reg_phoneNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
@@ -103,16 +100,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/contraseña"
+            android:id="@+id/reg_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
-            android:transitionName="contraseña_tran"
+            android:transitionName="password_tran"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/reg_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -127,13 +123,15 @@
         android:layout_height="wrap_content"
         android:background="#000"
         android:text="Registrarse"
-        android:textColor="#00BCD4" />
+        android:textColor="#00BCD4"
+        android:transitionName="button_tran"/>
 
     <Button
         android:id="@+id/reg_login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#00BCD4"
-        android:text="Si ya tienes una cuenta..Entra!" />
+        android:text="Si ya tienes una cuenta..Entra!"
+        android:transitionName="login_signup_tran"/>
 
 </LinearLayout>
