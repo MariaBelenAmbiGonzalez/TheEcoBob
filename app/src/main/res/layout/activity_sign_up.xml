@@ -122,9 +122,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000"
+        android:onClick="registerUser"
         android:text="Registrarse"
         android:textColor="#00BCD4"
-        android:transitionName="button_tran"/>
+        android:transitionName="button_tran" />
 
     <Button
         android:id="@+id/reg_login_btn"
