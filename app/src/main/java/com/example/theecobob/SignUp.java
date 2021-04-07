@@ -97,7 +97,7 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
-       private Boolean validatePassword() {
+    private Boolean validatePassword() {
             String val = regPassword.getEditText().getText().toString();
             String passwordVal = "^" +
                     //"(?=.*[0-9])" +         //at least 1 digit
@@ -110,10 +110,10 @@ public class SignUp extends AppCompatActivity {
                     "$";
 
             if (val.isEmpty()) {
-                regPassword.setError("Field cannot be empty");
+                regPassword.setError("Campo no puede estar vacío");
                 return false;
             } else if (!val.matches(passwordVal)) {
-                regPassword.setError("Password is too weak");
+                regPassword.setError("Contraseña muy débil");
                 return false;
             } else {
                 regPassword.setError(null);
@@ -140,7 +140,7 @@ public class SignUp extends AppCompatActivity {
         String password = regPassword.getEditText().getText().toString();
 
         UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
-        reference.child(phoneNo).setValue(helperClass);
+        reference.child(username).setValue(helperClass);
 
     }
 

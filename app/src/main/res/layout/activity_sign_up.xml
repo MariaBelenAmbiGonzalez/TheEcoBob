@@ -133,6 +133,6 @@
         android:layout_height="wrap_content"
         android:background="#00BCD4"
         android:text="Si ya tienes una cuenta..Entra!"
-        android:transitionName="login_signup_tran"/>
+        android:transitionName="login_signup_tran" />
 
 </LinearLayout>

@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Entra para continuar"
         android:textSize="18sp"
-        android:transitionName="slogan_tran"/>
+        android:transitionName="slogan_tran" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,6 +78,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="#000000"
+            android:onClick="loginUser"
             android:text="Entrar"
             android:textColor="#00BCD4"
             android:transitionName="button_tran" />
@@ -91,23 +92,27 @@
             android:background="#00000000"
             android:elevation="0dp"
 
+            android:onClick="callSignUpScreen"
             android:text="¿Nuevo usuario? REGÍSTRATE"
             android:textColor="#000000"
             android:textStyle="bold"
             android:transitionName="login_signup_tran" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_margin="0dp"
             android:background="#00000000"
             android:elevation="0dp"
-            android:fontFamily="@font/antic"
+            android:fontFamily="@font/bungee"
             android:text="Si no tienes la contraseña, clicka aquí"
+            android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="#000000"
-            android:transitionName="sincontraseña_tran"/>
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:transitionName="sincontraseña_tran" />
 
     </LinearLayout>
 
