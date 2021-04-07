@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TheEcoBob</string>
+
+    <string name="residuos"> Tipos de residuos y contenedores</string>
+
+    <string name="plastico">Contenedor amarillo:</string>
+    <string name="papel"> Contenedor azul:</string>
+    <string name="vidrio"> Contenedor verde:</string>
+    <string name="orgánico"> Contenedor marrón:</string>
+    <string name="resto"> Contenedor gris:</string>
+    <string name="juega">JUEGA RECICLANDO</string>
+
+
 </resources>
