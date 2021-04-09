@@ -10,19 +10,20 @@
     tools:context=".SignUp">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="127dp"
+        android:layout_height="121dp"
+        android:layout_gravity="center"
         android:src="@drawable/theecobobwhite"
         android:transitionName="logo_image" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-15dp"
         android:fontFamily="@font/bungee"
         android:text="Feliz de tener un nuevo ecoamigo!"
         android:textColor="#00BCD4"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:transitionName="logo_text" />
 
     <TextView
@@ -109,13 +110,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
+            android:fontFamily="@font/concert_one"
             android:transitionName="password_tran"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/concert_one"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -126,18 +127,19 @@
         android:id="@+id/reg_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
+        android:background="#00BCD4"
         android:onClick="registerUser"
         android:text="Registrarse"
-        android:textColor="#00BCD4"
+        android:textColor="#fff"
         android:transitionName="button_tran" />
 
     <Button
         android:id="@+id/reg_login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00BCD4"
-        android:text="Si ya tienes una cuenta..Entra!"
+        android:background="#fff"
+        android:onClick="loginUser"
+        android:text="¿Ya tenías cuenta? Entra aquí!"
         android:transitionName="login_signup_tran" />
 
 </LinearLayout>

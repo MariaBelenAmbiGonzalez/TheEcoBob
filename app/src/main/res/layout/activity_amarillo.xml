@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Amarillo">
+    tools:context=".Amarillo"
+    android:background="#fff">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize">
+
+            <ImageButton
+                android:id="@+id/atras"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/backcloud" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="208dp"
+                android:layout_height="97dp"
+                android:fontFamily="@font/concert_one"
+                android:padding="5dp"
+                android:text="CONTENEDOR AMARILLO"
+                android:textColor="@color/plastico"
+                android:textSize="33dp" />
+
+            <ImageView
+            android:layout_width="200dp"
+            android:layout_height="98dp"
+            android:src="@drawable/plastico"
+            android:layout_alignParentRight="true"
+            android:transitionName="logo_image"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <fragment
+                android:layout_width="365dp"
+                android:layout_height="53dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

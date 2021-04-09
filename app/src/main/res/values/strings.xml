@@ -10,5 +10,14 @@
     <string name="resto"> Contenedor gris:</string>
     <string name="juega">JUEGA RECICLANDO</string>
 
+    <string name="ListaPlasticos">
+
+        LATAS
+        TETABRICK
+        ETC
+        ETC
+
+    </string>
+
 
 </resources>

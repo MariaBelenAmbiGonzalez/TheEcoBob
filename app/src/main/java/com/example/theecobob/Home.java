@@ -24,7 +24,7 @@ public class Home extends AppCompatActivity {
         btnHomeOrgánico = findViewById(R.id.btnOrganico);
         btnHomeResto = findViewById(R.id.btnResto);
 
-        //Procedimiento para llamar a la clase
+        //Procedimiento para llamar a la clase Amarillo
         btnHomePlastico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,5 +34,44 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        //Procedimiento para llamar a la clase Azul
+        btnHomePapel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Home.this,Azul.class);
+                startActivity(intentHome);
+                finish();
+            }
+        });
+
+        //Procedimiento para llamar a la clase Verde
+        btnHomeVidrio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Home.this,Verde.class);
+                startActivity(intentHome);
+                finish();
+            }
+        });
+
+        //Procedimiento para llamar a la clase Marrón
+        btnHomeOrgánico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Home.this,Marron.class);
+                startActivity(intentHome);
+                finish();
+            }
+        });
+
+        //Procedimiento para llamar a la clase Gris
+        btnHomeResto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Home.this,Gris.class);
+                startActivity(intentHome);
+                finish();
+            }
+        });
     }
 }

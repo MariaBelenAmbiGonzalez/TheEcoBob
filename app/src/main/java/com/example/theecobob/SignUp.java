@@ -2,6 +2,7 @@ package com.example.theecobob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ public class SignUp extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,15 @@ public class SignUp extends AppCompatActivity {
         regBtn = findViewById(R.id.reg_btn);
         regToLoginBtn = findViewById(R.id.reg_login_btn);
 
+        //Procedimiento botón de ya estabas registrado a log in por COLOCAR
+        regToLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUp.this,Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private Boolean validateName() {
@@ -51,6 +63,7 @@ public class SignUp extends AppCompatActivity {
     private Boolean validateUsername() {
         String val = regUsername.getEditText().getText().toString();
         String noWhiteSpace = "\\A\\w{4,20}\\z";
+        boolean x = true;
 
         if (val.isEmpty()) {
             regUsername.setError("Campo no puede estar vacío");
@@ -66,6 +79,7 @@ public class SignUp extends AppCompatActivity {
             regUsername.setErrorEnabled(false);
             return true;
         }
+
     }
 
     private Boolean validateEmail()  {
@@ -122,13 +136,13 @@ public class SignUp extends AppCompatActivity {
             }
         }
 
-    //Guardar datos en FireBase clickando el botón
+    //Guardar datos en FireBase clickando el botón registrarse
     public void registerUser(View view) {
 
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("Users");
 
-        if(!validateName() | !validatePassword() | !validatePhoneNo() | !validateEmail() | !validateUsername()){
+        if(!validateName() && !validatePassword() | !validatePhoneNo() | !validateEmail() | !validateUsername()){
             return;
         }
 
@@ -142,6 +156,8 @@ public class SignUp extends AppCompatActivity {
         UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
         reference.child(username).setValue(helperClass);
 
+        Intent intent = new Intent(SignUp.this,Login.class);
+        startActivity(intent);
+        finish();
+        }
     }
-
-}
