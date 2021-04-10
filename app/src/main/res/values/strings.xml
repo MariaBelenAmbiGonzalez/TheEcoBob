@@ -10,14 +10,8 @@
     <string name="resto"> Contenedor gris:</string>
     <string name="juega">JUEGA RECICLANDO</string>
 
-    <string name="ListaPlasticos">
-
-        LATAS
-        TETABRICK
-        ETC
-        ETC
-
-    </string>
+    <string name="sitirar"> Que SÍ tirar aquí: </string>
+    <string name="notirar"> Que NO tirar aquí</string>
 
 
 </resources>
