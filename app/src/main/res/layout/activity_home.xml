@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@color/lightWhite">
+    android:background="@color/blanco">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,14 +55,14 @@
                 android:layout_height="110dp"
                 android:background="@drawable/fnegro">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/concert_one"
-                android:padding="10dp"
-                android:text="@string/plastico"
-                android:textColor="@color/plastico"
-                android:textSize="26sp" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/concert_one"
+                    android:padding="10dp"
+                    android:text="@string/plastico"
+                    android:textColor="@color/amarillo"
+                    android:textSize="26sp" />
 
             <ImageButton
                 android:id="@+id/btnPlastico"
@@ -93,7 +93,7 @@
                 android:fontFamily="@font/concert_one"
                 android:padding="10dp"
                 android:text="@string/papel"
-                android:textColor="@color/papel"
+                android:textColor="@color/azul"
                 android:textSize="26sp" />
 
             <ImageButton
@@ -125,7 +125,7 @@
                     android:fontFamily="@font/concert_one"
                     android:padding="10dp"
                     android:text="@string/vidrio"
-                    android:textColor="@color/vidrio"
+                    android:textColor="@color/verde"
                     android:textSize="26sp" />
 
                 <ImageButton
@@ -157,7 +157,7 @@
                     android:fontFamily="@font/concert_one"
                     android:padding="10dp"
                     android:text="@string/orgánico"
-                    android:textColor="@color/organico"
+                    android:textColor="@color/marron"
                     android:textSize="26sp" />
 
                 <ImageButton
@@ -189,7 +189,7 @@
                     android:fontFamily="@font/concert_one"
                     android:padding="10dp"
                     android:text="@string/resto"
-                    android:textColor="@color/resto"
+                    android:textColor="@color/gris"
                     android:textSize="26sp" />
 
                 <ImageButton

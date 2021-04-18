@@ -20,9 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private static int splashScreen = 5000;
 
     //Variables
-    Animation top_animation, bottom_animation;
+    Animation top_animation;
+    Animation bottom_animation;
+
     ImageView image;
-    TextView logo, slogan;
+
+    TextView logo;
+    TextView slogan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

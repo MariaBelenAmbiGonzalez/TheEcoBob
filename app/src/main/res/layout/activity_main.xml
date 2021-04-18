@@ -7,6 +7,7 @@
     android:background="#B3E0FF"
     tools:context=".MainActivity">
 
+    <!--  -->
 
     <TextView
         android:id="@+id/Logo"
@@ -31,7 +32,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/bungee"
-        android:text="Por un mundo mejor, más diverso e igualitario"
+        android:text="@string/slogan"
         android:textAlignment="center"
         android:textColor="#040404"
         android:textSize="18sp"

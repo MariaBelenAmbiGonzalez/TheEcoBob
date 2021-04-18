@@ -2,6 +2,7 @@
     <string name="app_name">TheEcoBob</string>
 
     <string name="residuos"> Tipos de residuos y contenedores</string>
+    <string name="slogan">"Por un mundo más diverso e igualitario"</string>
 
     <string name="plastico">Contenedor amarillo:</string>
     <string name="papel"> Contenedor azul:</string>
@@ -11,7 +12,12 @@
     <string name="juega">JUEGA RECICLANDO</string>
 
     <string name="sitirar"> Que SÍ tirar aquí: </string>
-    <string name="notirar"> Que NO tirar aquí</string>
+    <string name="notirar"> Que NO tirar aquí: </string>
+
+    <string name="infoplastico">Cada minuto se usan cerca de un millón de bolsas de plástico en el mundo.</string>
+    <string name="infopapel">Actualmente en España, se consume una media de 160 kg de papel por usuario y año.</string>
+    <string name="infovidrio">Las ciudades que más reciclan vidrio en España son: Donostia - San Sebastián, Pamplona, Bilbao, Palencia, Palma de Mallorca y Barcelona. </string>
+    <string name="infogeneral">Los países que más dióxido de carbono emiten a la atmósfera son China, India, EE. UU. y Rusia. </string>
 
 
 </resources>

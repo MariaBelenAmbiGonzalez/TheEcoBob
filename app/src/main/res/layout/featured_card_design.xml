@@ -9,16 +9,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/featured_image"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/envasesplasticosamarillos"
-            android:scaleType="centerCrop">
+            android:scaleType="centerCrop"
+            android:src="@drawable/envasesplasticosamarillos">
         </ImageView>
 
         <TextView
@@ -27,19 +27,18 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bungee"
             android:text="Botellas y envases de plástico"
-            android:textColor="@color/plastico"
-            android:textSize="12dp"></TextView>
+            android:textColor="#040404"
+            android:textSize="12dp">
+        </TextView>
 
         <TextView
             android:id="@+id/featured_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CURIOSIDADES Y TRUCOS"
             android:fontFamily="@font/concert_one"
+            android:text="CURIOSIDADES Y TRUCOS"
             android:textSize="13dp">
         </TextView>
-
-
 
     </LinearLayout>
 
