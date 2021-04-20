@@ -43,6 +43,7 @@
             android:text="@string/residuos"
             android:textAllCaps="true"
             android:textColor="#000"
+            android:textAlignment="center"
             android:textSize="20sp" />
 
         <RelativeLayout
@@ -72,6 +73,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="0dp"
                 android:scaleType="fitXY"
+                android:background="@color/negro"
                 app:srcCompat="@drawable/plastico" />
 
             </RelativeLayout>
@@ -104,6 +106,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="0dp"
                 android:scaleType="fitXY"
+                android:background="@color/negro"
                 app:srcCompat="@drawable/papelycarton" />
 
             </RelativeLayout>
@@ -136,6 +139,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="0dp"
                     android:scaleType="fitXY"
+                    android:background="@color/negro"
                     app:srcCompat="@drawable/vidrio" />
 
             </RelativeLayout>
@@ -168,6 +172,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="0dp"
                     android:scaleType="fitXY"
+                    android:background="@color/negro"
                     app:srcCompat="@drawable/organicos" />
 
             </RelativeLayout>
@@ -200,6 +205,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="0dp"
                     android:scaleType="fitXY"
+                    android:background="@color/negro"
                     app:srcCompat="@drawable/desechosgeneral_" />
 
             </RelativeLayout>

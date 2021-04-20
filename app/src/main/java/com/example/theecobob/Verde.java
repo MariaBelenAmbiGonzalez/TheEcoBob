@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.theecobob.HelperClasses.HomeAdapter.FeaturedAdapter;
@@ -71,6 +72,13 @@ public class Verde extends AppCompatActivity {
 
         adapter=new FeaturedAdapter(featuredLocations);
         featuredRecycler2.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Home.class);
+        startActivity(intent);
+        finish();
     }
 
 }
