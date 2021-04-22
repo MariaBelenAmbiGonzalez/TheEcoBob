@@ -25,7 +25,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="0dp"
                 android:scaleType="fitXY"
-                android:background="@color/negro"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/backcloud">
             </ImageButton>
         </RelativeLayout>
@@ -61,14 +61,15 @@
             android:layout_height="330dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:background="@color/negro">
+            android:background="@color/blanco">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/featured_recycler"
                 android:layout_width="358dp"
                 android:layout_height="330dp"
                 android:layout_centerVertical="true"
-                android:background="@color/amarillo"></androidx.recyclerview.widget.RecyclerView>
+                android:background="@color/amarillo">
+            </androidx.recyclerview.widget.RecyclerView>
         </RelativeLayout>
 
         <RelativeLayout
@@ -77,23 +78,34 @@
             android:layout_gravity="center">
 
             <TextView
-                android:layout_width="408dp"
-                android:layout_height="97dp"
+                android:id="@+id/frasesAmarillo"
+                android:layout_width="418dp"
+                android:layout_height="120dp"
                 android:fontFamily="@font/bungee"
+                android:padding="10dp"
                 android:text="@string/infoplastico"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="11dp"
-                android:padding="10dp">
+                android:textSize="11dp">
             </TextView>
+
         </RelativeLayout>
+        <ImageButton
+            android:id="@+id/btnGenerate"
+            android:layout_width="50dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:scaleType="center"
+            android:tint="@color/amarillo"
+            app:srcCompat="@android:drawable/ic_popup_sync" />
 
         <RelativeLayout
             android:layout_width="382dp"
             android:layout_height="330dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:background="@color/negro">
+            android:background="@color/blanco">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/featured_recycler2"

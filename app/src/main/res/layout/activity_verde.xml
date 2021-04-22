@@ -25,6 +25,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="0dp"
                 android:scaleType="fitXY"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/backcloud">
             </ImageButton>
         </RelativeLayout>

@@ -5,16 +5,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.theecobob.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.theecobob.HelperClasses.HomeAdapter.FeaturedHelperClass;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Amarillo extends AppCompatActivity {
     //Variables para cartas
     RecyclerView featuredRecycler; //Si va en el contenedor amarillo
     RecyclerView featuredRecycler2; //No va en el contenedor amarillo
+
+    //Variables para frases
+    TextView frasesText;
+    ImageButton btn_Generate;
 
     RecyclerView.Adapter adapter;
 
@@ -27,6 +35,29 @@ public class Amarillo extends AppCompatActivity {
         //Hooks
         featuredRecycler=findViewById(R.id.featured_recycler);
         featuredRecycler2=findViewById(R.id.featured_recycler2);
+        frasesText=findViewById(R.id.frasesAmarillo);
+        btn_Generate=findViewById(R.id.btnGenerate);
+
+        final String frases[]={
+                "Cada minuto se usan cerca de un millón de bolsas de plástico en el mundo.",
+                "Se pueden llegar a necesitar cerca de 1.000 años para que la naturaleza consiga eliminar el plástico.",
+                "Menos del 5% de las bolsas del plástico son recicladas cada año.",
+                "Decenas de miles de toneladas de plástico flotan por los océanos en el mundo.",
+                "Los animales que consumen plástico provoca que haya casa vez más especies en peligro de extinción, como peces, tortugas y aves.",
+                "El 40% del plástico que se usa para envases son de 1 solo uso.",
+                "La mitad del plástico fabricado ha sido a partir del año 2000.",
+                "Entre el 8-10% de la producción de petróleo se utiliza para fabricar plástico.",
+                "Reciclando 6 latas o briks se contrarresta la emisión de 10 minutos de un tubo de escape."
+        };
+
+        btn_Generate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random rand= new Random();
+                int Frases= rand.nextInt(9);
+                frasesText.setText(frases[Frases]);
+            }
+        });
 
         //Llamamos a los métodos
         featuredRecycler(); // Sí va en el contenedor amarillo
