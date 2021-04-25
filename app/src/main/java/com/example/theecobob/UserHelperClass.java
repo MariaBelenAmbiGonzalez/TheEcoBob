@@ -2,6 +2,8 @@ package com.example.theecobob;
 
 public class UserHelperClass {
 
+    //Clase para llevar los datos a Firebase
+
     String name, username, email, phoneNo, password;
 
     public UserHelperClass() {

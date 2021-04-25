@@ -2,6 +2,8 @@ package com.example.theecobob.HelperClasses.HomeAdapter;
 
 public class FeaturedHelperClass {
 
+    //Para las cards del RV
+
     //Variables
     int image;
     String tittle, description;

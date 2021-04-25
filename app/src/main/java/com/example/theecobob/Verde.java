@@ -6,17 +6,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.theecobob.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.theecobob.HelperClasses.HomeAdapter.FeaturedHelperClass;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Verde extends AppCompatActivity {
 
     //Variables para cartas
     RecyclerView featuredRecycler; //Si va en el contenedor verde
     RecyclerView featuredRecycler2; //No va en el contenedor verde
+
+    //Variables para frases
+    TextView frasesText;
+    ImageButton btn_Generate;
+
 
     RecyclerView.Adapter adapter;
 
@@ -30,6 +39,25 @@ public class Verde extends AppCompatActivity {
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         featuredRecycler2 = findViewById(R.id.featured_recycler2);
+        frasesText=findViewById(R.id.frasesVerde);
+        btn_Generate=findViewById(R.id.btnGenerate);
+
+        final String frases[]={
+                "El vidrio es 100% reciclable y se puede utilizar una y otra vez.",
+                "El vidrio se separa en colores porque el conserva su color incluso después de reciclado.",
+                "Una botella de vidrio ahorra energía para una bombilla de 100 vatios durante 4 horas.",
+                "Una botella de vidrio moderna puede tardar más de 4000 años en descomponerse.",
+                "En el 2021 se recicla un 30% más de vidrio en los últimos cinco años en España.",
+                "En España existen 230.950 contenedores para reciclar envases de vidrio.",
+                "En España cada ciudadano depositó en el contenedor verde 19kg de vidrio en el 2019."
+        };
+        btn_Generate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random rand= new Random();
+                int Frases= rand.nextInt(7); //Total de frases
+                frasesText.setText(frases[Frases]); }
+        });
 
         //Llamamos a los métodos
         featuredRecycler(); // Sí va en el contenedor verde

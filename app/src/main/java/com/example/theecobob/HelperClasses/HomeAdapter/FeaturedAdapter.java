@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.FeaturedViewHolder> {
 
+    //Clases para los Recycler View
+
     ArrayList<FeaturedHelperClass> featuredLocations;
 
     public FeaturedAdapter(ArrayList<FeaturedHelperClass> featuredLocations) {

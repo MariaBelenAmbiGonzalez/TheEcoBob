@@ -194,7 +194,7 @@
                     android:fontFamily="@font/concert_one"
                     android:padding="10dp"
                     android:text="@string/resto"
-                    android:textColor="@color/gris"
+                    android:textColor="#BCBABA"
                     android:textSize="26sp" />
 
                 <ImageButton
@@ -215,25 +215,17 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="120dp">
+                
+                <Button
+                    android:id="@+id/btnjuegareciclando"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:background="@drawable/famarillo"
+                    android:text="JUEGA RECICLANDO"
+                    android:fontFamily="@font/bungee"
+                    android:textSize="26sp">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="110dp"
-                android:background="@drawable/famarillo">
-
-                <TextView
-                    android:layout_width="285dp"
-                    android:layout_height="80dp"
-                    android:fontFamily="@font/concert_one"
-                    android:padding="20dp"
-                    android:text="@string/juega"
-                    android:textColor="#000"
-                    android:textSize="26sp"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    android:textAlignment="center"/>
-
-            </RelativeLayout>
+                </Button>
 
         </RelativeLayout>
 

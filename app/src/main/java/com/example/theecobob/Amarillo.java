@@ -35,6 +35,7 @@ public class Amarillo extends AppCompatActivity {
         //Hooks
         featuredRecycler=findViewById(R.id.featured_recycler);
         featuredRecycler2=findViewById(R.id.featured_recycler2);
+        //Frases
         frasesText=findViewById(R.id.frasesAmarillo);
         btn_Generate=findViewById(R.id.btnGenerate);
 
@@ -54,7 +55,7 @@ public class Amarillo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Random rand= new Random();
-                int Frases= rand.nextInt(9);
+                int Frases= rand.nextInt(9); //Total de frases
                 frasesText.setText(frases[Frases]);
             }
         });
