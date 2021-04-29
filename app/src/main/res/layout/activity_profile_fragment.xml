@@ -8,11 +8,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="139dp"
+        android:layout_height="158dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/avatar"
-        app:civ_border_color="#FF000000"
+        app:civ_border_color="@color/colorAccent"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,10 +77,10 @@
 
     <Button
         android:id="@+id/updateBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_3"
+        android:layout_width="366dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorAccent"
         android:fontFamily="@font/concert_one"
         android:text="Actualizar perfil"
         android:textColor="@color/blanco"

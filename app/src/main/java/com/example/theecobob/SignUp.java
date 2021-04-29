@@ -1,163 +1,88 @@
 package com.example.theecobob;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.theecobob.databinding.ActivitySignUpBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 
 public class SignUp extends AppCompatActivity {
 
-    //Variables
-    TextInputLayout regName, regUsername, regEmail, regPhoneNo, regPassword;
-    Button regBtn, regToLoginBtn;
-
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
-
+    ActivitySignUpBinding binding; //hecho
+    FirebaseAuth auth;
+    FirebaseFirestore database;
+    ProgressDialog dialog;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        binding = ActivitySignUpBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        //Hooks
-        regName = findViewById(R.id.reg_name);
-        regUsername = findViewById(R.id.reg_username);
-        regEmail = findViewById(R.id.reg_email);
-        regPhoneNo = findViewById(R.id.reg_phoneNo);
-        regPassword = findViewById(R.id.reg_password);
-        regBtn = findViewById(R.id.reg_btn);
-        regToLoginBtn = findViewById(R.id.reg_login_btn);
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseFirestore.getInstance();
 
-        //Procedimiento botón de ya estabas registrado a log in por COLOCAR
-        regToLoginBtn.setOnClickListener(new View.OnClickListener() {
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Te estamos registrando ecoamigo");
+
+        binding.createNewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this,Login.class);
-                startActivity(intent);
-                finish();
+            public void onClick(View view) {
+                String email, pass,name, referCode;
+
+                email = binding.emailBox.getText().toString();
+                pass = binding.passwordBox.getText().toString();
+                name = binding.nameBox.getText().toString();
+                referCode = binding.referBox.getText().toString();
+
+              final  UserHelperClass user = new UserHelperClass(name,email,pass,referCode);
+
+              dialog.show();
+
+                auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            String uid = task.getResult().getUser().getUid();
+                            database
+                                    .collection("users")
+                                    .document(uid)
+                                    .set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()){
+                                        dialog.dismiss();
+                                        Intent intent = new Intent(SignUp.this,Home.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(SignUp.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+
+                        } else {
+                            dialog.dismiss();
+                            Toast.makeText(SignUp.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
-    }
-
-    private Boolean validateName() {
-        String val = regName.getEditText().getText().toString();
-
-        if (val.isEmpty()) {
-            regName.setError("Campo no puede estar vacío");
-            return false;
-        } else {
-            regName.setError(null);
-            regName.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    private Boolean validateUsername() {
-        String val = regUsername.getEditText().getText().toString();
-        String noWhiteSpace = "\\A\\w{4,20}\\z";
-        boolean x = true;
-
-        if (val.isEmpty()) {
-            regUsername.setError("Campo no puede estar vacío");
-            return false;
-        } else if (val.length() >= 15) {
-            regUsername.setError("Username muy largo");
-            return false;
-        } else if (!val.matches(noWhiteSpace)) {
-            regUsername.setError("Espacios en blanco no permitidos");
-            return false;
-        } else {
-            regUsername.setError(null);
-            regUsername.setErrorEnabled(false);
-            return true;
-        }
 
     }
 
-    private Boolean validateEmail()  {
-        String val = regEmail.getEditText().getText().toString();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+";
-
-        if (val.isEmpty()) {
-            regEmail.setError("Campo no puede estar vacío");
-            return false;
-
-        } else if (!val.matches(emailPattern)) {
-            regEmail.setError("email inválido");
-            return false;
-        } else {
-            regEmail.setError(null);
-            return true;
-        }
-    }
-
-    private Boolean validatePhoneNo() {
-        String val = regPhoneNo.getEditText().getText().toString();
-
-        if (val.isEmpty()) {
-            regPhoneNo.setError("Campo no puede estar vacío");
-            return false;
-        } else {
-            regPhoneNo.setError(null);
-            return true;
-        }
-    }
-
-    private Boolean validatePassword() {
-            String val = regPassword.getEditText().getText().toString();
-            String passwordVal = "^" +
-                    //"(?=.*[0-9])" +         //at least 1 digit
-                    //"(?=.*[a-z])" +         //at least 1 lower case letter
-                    //"(?=.*[A-Z])" +         //at least 1 upper case letter
-                    "(?=.*[a-zA-Z])" +      //any letter
-                    "(?=.*[@#$%^&+=])" +    //at least 1 special character
-                    "(?=\\S+$)" +           //no white spaces
-                    ".{4,}" +               //at least 4 characters
-                    "$";
-
-            if (val.isEmpty()) {
-                regPassword.setError("Campo no puede estar vacío");
-                return false;
-            } else if (!val.matches(passwordVal)) {
-                regPassword.setError("Contraseña muy débil");
-                return false;
-            } else {
-                regPassword.setError(null);
-                regPassword.setErrorEnabled(false);
-                return true;
-            }
-        }
-
-    //Guardar datos en FireBase clickando el botón registrarse
-    public void registerUser(View view) {
-
-        rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("Users");
-
-        if(!validateName() && !validatePassword() | !validatePhoneNo() | !validateEmail() | !validateUsername()){
-            return;
-        }
-
-        //Get all the values
-        String name = regName.getEditText().getText().toString();
-        String username = regUsername.getEditText().getText().toString();
-        String email = regEmail.getEditText().getText().toString();
-        String phoneNo = regPhoneNo.getEditText().getText().toString();
-        String password = regPassword.getEditText().getText().toString();
-
-        UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
-        reference.child(username).setValue(helperClass);
-
-        Intent intent = new Intent(SignUp.this,Login.class);
-        startActivity(intent);
-        finish();
-        }
-    }
+}

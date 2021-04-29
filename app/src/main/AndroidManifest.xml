@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileFragment"></activity>
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".ProfileFragment" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ForgetPasswordSuccesMessage" />
@@ -21,8 +23,6 @@
         <activity android:name=".Azul" />
         <activity android:name=".Amarillo" />
         <activity android:name=".Home" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

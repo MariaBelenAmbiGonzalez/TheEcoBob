@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "332097567980",
-    "project_id": "boobieproject-26e01",
-    "storage_bucket": "boobieproject-26e01.appspot.com"
+    "project_number": "352512507086",
+    "project_id": "theecobobi",
+    "storage_bucket": "theecobobi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:332097567980:android:739701875c92fa783f39c9",
+        "mobilesdk_app_id": "1:352512507086:android:996a97b968ceb6a5eb649f",
         "android_client_info": {
           "package_name": "com.example.theecobob"
         }
       },
       "oauth_client": [
         {
-          "client_id": "332097567980-0r86ettvq5tf78umnukit4fjq8f773gl.apps.googleusercontent.com",
+          "client_id": "352512507086-0u4ngcc5q7ik22hkagti6rctgpanctrh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDK1YyXGm0CMFvDFOaWfYlUj5Hv7HXbEBc"
+          "current_key": "AIzaSyAl52CB186xXrdGeKMUl5gcVJsc_Zj7Fww"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "332097567980-0r86ettvq5tf78umnukit4fjq8f773gl.apps.googleusercontent.com",
+              "client_id": "352512507086-0u4ngcc5q7ik22hkagti6rctgpanctrh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
