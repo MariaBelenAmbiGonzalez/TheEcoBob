@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Home extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class Home extends AppCompatActivity {
 
         //Variables
         ImageButton btnHomePlastico, btnHomePapel, btnHomeVidrio, btnHomeOrgánico, btnHomeResto;
+        Button btnHomejuegareciclando;
 
         //Hooks
         btnHomePlastico = findViewById(R.id.btnPlastico);
@@ -23,6 +25,7 @@ public class Home extends AppCompatActivity {
         btnHomeVidrio = findViewById(R.id.btnVidrio);
         btnHomeOrgánico = findViewById(R.id.btnOrganico);
         btnHomeResto = findViewById(R.id.btnResto);
+        btnHomejuegareciclando = findViewById(R.id.btnjuegareciclando);
 
         //Procedimiento para llamar a la clase Amarillo
         btnHomePlastico.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +72,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentHome = new Intent (Home.this,Gris.class);
+                startActivity(intentHome);
+                finish();
+            }
+        });
+
+        btnHomejuegareciclando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Home.this, CategoryMain.class);
                 startActivity(intentHome);
                 finish();
             }
