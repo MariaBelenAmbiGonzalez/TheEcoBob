@@ -14,11 +14,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
+
 
 
 public class WalletFragment extends Fragment {
-/*
+
     public WalletFragment() {
         // Requiere un constructor vacío
     }
@@ -31,6 +31,7 @@ public class WalletFragment extends Fragment {
     FragmentWalletBinding binding;
     FirebaseFirestore database;
     User user;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -42,15 +43,18 @@ public class WalletFragment extends Fragment {
         database.collection("users")
                 .document(FirebaseAuth.getInstance().getUid())
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+
+
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 user = documentSnapshot.toObject(User.class);
                 binding.currentCoins.setText(String.valueOf(user.getCoins()));
 
-                //binding.currentCoins.setText(user.getCoins() + "");
+                binding.currentCoins.setText(user.getCoins() + "");
 
             }
         });
+
 
         binding.sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +73,7 @@ public class WalletFragment extends Fragment {
                         }
                     });
                 } else {
-                    Toast.makeText(getContext(), "You need more coins to get withdraw.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Sigue jugando hasta que llegues a conseguir la recompensa! .", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -77,5 +81,5 @@ public class WalletFragment extends Fragment {
         return binding.getRoot();
     }
 
- */
+
 }

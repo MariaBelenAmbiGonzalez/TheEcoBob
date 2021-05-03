@@ -6,8 +6,10 @@
     <item android:id="@+id/rank"
             android:title="Ranking"
             android:icon="@drawable/trophy"/>
+    <item android:id="@+id/wallet"
+        android:title="Wallet"
+        android:icon="@drawable/wallet"/>
     <item android:id="@+id/profile"
             android:title="Perfil"
             android:icon="@drawable/user"/>
-
 </menu>

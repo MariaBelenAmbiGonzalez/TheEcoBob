@@ -2,6 +2,7 @@
 
 package com.example.theecobob;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,15 +10,16 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.theecobob.databinding.ActivityCategoryMainBinding;
 
-import java.util.ArrayList;
+import me.ibrahimsn.lib.OnItemSelectedListener;
 
 public class CategoryMain extends AppCompatActivity {
 
     ActivityCategoryMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +29,35 @@ public class CategoryMain extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content, new HomeFragment());
+        transaction.commit();
 
-        ArrayList<CategoryModel> categories = new ArrayList<>();
-        categories.add(new CategoryModel("", "Plástico", "https://cdn.dribbble.com/users/427368/screenshots/14114331/dribbble.jpg"));
-        categories.add(new CategoryModel("", "Papel", "https://cdn.dribbble.com/users/427368/screenshots/14114331/dribbble.jpg"));
-        categories.add(new CategoryModel("", "Vidrio", "https://cdn.dribbble.com/users/427368/screenshots/14114331/dribbble.jpg"));
-        categories.add(new CategoryModel("", "Organico", "https://cdn.dribbble.com/users/427368/screenshots/14114331/dribbble.jpg"));
-        categories.add(new CategoryModel("", "Resto", "https://cdn.dribbble.com/users/427368/screenshots/14114331/dribbble.jpg"));
-
-        CategoryAdapter adapter = new CategoryAdapter(this, categories);
-        binding.categoryList.setLayoutManager((new GridLayoutManager(this, 2)));
-        binding.categoryList.setAdapter(adapter);
+        binding.bottomBar.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public boolean onItemSelect(int i) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                switch (i){
+                    case 0:
+                        transaction.replace(R.id.content, new HomeFragment());
+                        transaction.commit();
+                        break;
+                    case 1:
+                        transaction.replace(R.id.content, new LeaderboardsFragment());
+                        transaction.commit();
+                        break;
+                    case 2:
+                        transaction.replace(R.id.content, new WalletFragment());
+                        transaction.commit();
+                        break;
+                    case 3:
+                        transaction.replace(R.id.content, new ProfileFragment());
+                        transaction.commit();
+                        break;
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -55,4 +75,12 @@ public class CategoryMain extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this,Home.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

@@ -1,15 +1,16 @@
 package com.example.theecobob;
 
-public class UserHelperClass {
+public class User {
 
     //Clase para llevar los datos a Firebase
 
-    String name, email, pass, referCode;
+    String name, email, pass, profile, referCode;
+    private long coins = 25;
 
-    public UserHelperClass() {
+    public User() {
     }
 
-    public UserHelperClass(String name, String email, String pass, String referCode) {
+    public User(String name, String email, String pass, String referCode) {
         this.name = name;
         this.email = email;
         this.pass = pass;
@@ -46,5 +47,21 @@ public class UserHelperClass {
 
     public void setReferCode(String referCode) {
         this.referCode = referCode;
+    }
+
+    public long getCoins() {
+        return coins;
+    }
+
+    public void setCoins(long coins) {
+        this.coins = coins;
+    }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
     }
 }

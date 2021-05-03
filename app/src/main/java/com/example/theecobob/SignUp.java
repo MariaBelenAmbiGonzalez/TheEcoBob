@@ -7,7 +7,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.theecobob.databinding.ActivitySignUpBinding;
@@ -16,7 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 
 public class SignUp extends AppCompatActivity {
 
@@ -48,7 +46,7 @@ public class SignUp extends AppCompatActivity {
                 name = binding.nameBox.getText().toString();
                 referCode = binding.referBox.getText().toString();
 
-              final  UserHelperClass user = new UserHelperClass(name,email,pass,referCode);
+              final User user = new User(name,email,pass,referCode);
 
               dialog.show();
 

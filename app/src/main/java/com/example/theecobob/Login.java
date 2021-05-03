@@ -34,6 +34,11 @@ public class Login extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         dialog.setMessage("Ecoingresando...");
 
+        if(auth.getCurrentUser() != null){
+            startActivity(new Intent(Login.this,Home.class));
+            finish();
+        }
+
         binding.submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
