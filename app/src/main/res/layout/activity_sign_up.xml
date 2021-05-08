@@ -12,8 +12,9 @@
         android:id="@+id/imageView"
         android:layout_width="250dp"
         android:layout_height="110dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/theecobobwhite" />
@@ -45,7 +46,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="CREATE AN ACCOUNT"
-                android:textColor="@color/colormain"
+                android:textColor="@color/colorAccent"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/bungee"/>
@@ -64,7 +65,7 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/negro"
                 android:ems="10"
-                android:hint="Full Name"
+                android:hint="Nombre completo"
                 android:fontFamily="@font/bungee"
                 android:inputType="textPersonName"
                 android:padding="15dp" />
@@ -80,7 +81,7 @@
                 android:drawableTint="@color/negro"
                 android:ems="10"
                 android:fontFamily="@font/bungee"
-                android:hint="Email Address"
+                android:hint="correo electrónico"
                 android:inputType="textEmailAddress"
                 android:padding="15dp" />
 
@@ -94,7 +95,7 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/negro"
                 android:ems="10"
-                android:hint="Password"
+                android:hint="Contraseña"
                 android:fontFamily="@font/bungee"
                 android:inputType="textPassword"
                 android:padding="15dp" />
@@ -109,7 +110,7 @@
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/negro"
                 android:ems="10"
-                android:hint="Refer Code"
+                android:hint="Ecoreferencia"
                 android:fontFamily="@font/bungee"
                 android:inputType="textPersonName"
                 android:padding="15dp" />
@@ -120,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Submit"
+                android:text="ENVIA"
                 android:fontFamily="@font/bungee"
                 android:background="@color/colormain"
                 android:textColor="@color/blanco" />
@@ -134,7 +135,7 @@
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/bungee"
                 android:background="@color/colormain"
-                android:text="Already have an account?"
+                android:text="YA TENIAS UNA ECOCUENTA, VERDAD?"
                 android:textColor="@color/blanco" />
 
             <TextView
@@ -144,6 +145,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
+                android:textColor="@color/negro"
                 android:fontFamily="@font/concert_one"
                 android:text="By signing up you agree to our privacy policy and terms and conditions."
                 android:textSize="10sp" />

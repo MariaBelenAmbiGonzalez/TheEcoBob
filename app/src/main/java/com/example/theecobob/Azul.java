@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class Azul extends AppCompatActivity {
     TextView frasesText;
     ImageButton btn_Generate;
 
+    Button btnHomejuegareciclando;
+
     RecyclerView.Adapter adapter;
 
     //Oncreate es el equivalente al main de Java
@@ -37,8 +40,10 @@ public class Azul extends AppCompatActivity {
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         featuredRecycler2 = findViewById(R.id.featured_recycler2);
+
         frasesText=findViewById(R.id.frasesAzul);
         btn_Generate=findViewById(R.id.btnGenerate);
+        btnHomejuegareciclando = findViewById(R.id.btnjuegareciclando);
 
         final String frases[]={
                 "El 71% de la madera que se usa para el papel procede de madera no certificada de fuentes controlada.",
@@ -58,6 +63,15 @@ public class Azul extends AppCompatActivity {
                 Random rand= new Random();
                 int Frases= rand.nextInt(9); //Total de frases
                 frasesText.setText(frases[Frases]);
+            }
+        });
+
+        btnHomejuegareciclando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Azul.this, CategoryMain.class);
+                startActivity(intentHome);
+                finish();
             }
         });
 

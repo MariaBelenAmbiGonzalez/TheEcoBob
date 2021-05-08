@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class Amarillo extends AppCompatActivity {
     TextView frasesText;
     ImageButton btn_Generate;
 
+    Button btnHomejuegareciclando;
+
     RecyclerView.Adapter adapter;
 
     //Oncreate es el equivalente al main de Java
@@ -38,6 +41,7 @@ public class Amarillo extends AppCompatActivity {
         //Frases
         frasesText=findViewById(R.id.frasesAmarillo);
         btn_Generate=findViewById(R.id.btnGenerate);
+        btnHomejuegareciclando = findViewById(R.id.btnjuegareciclando);
 
         final String frases[]={
                 "Cada minuto se usan cerca de un millón de bolsas de plástico en el mundo.",
@@ -57,6 +61,15 @@ public class Amarillo extends AppCompatActivity {
                 Random rand= new Random();
                 int Frases= rand.nextInt(9); //Total de frases
                 frasesText.setText(frases[Frases]);
+            }
+        });
+
+        btnHomejuegareciclando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Amarillo.this, CategoryMain.class);
+                startActivity(intentHome);
+                finish();
             }
         });
 
@@ -113,6 +126,8 @@ public class Amarillo extends AppCompatActivity {
         featuredRecycler2.setAdapter(adapter);
 
     }
+
+
 
     @Override
     public void onBackPressed(){

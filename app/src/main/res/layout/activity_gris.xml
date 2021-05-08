@@ -114,6 +114,23 @@
                 android:background="@color/rojo"></androidx.recyclerview.widget.RecyclerView>
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200dp">
+
+
+        <Button
+            android:id="@+id/btnjuegareciclando"
+            android:layout_width="429dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/gris"
+            android:fontFamily="@font/bungee"
+            android:text="JUEGA RECICLANDO"
+            android:textSize="26sp"></Button>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 </ScrollView>

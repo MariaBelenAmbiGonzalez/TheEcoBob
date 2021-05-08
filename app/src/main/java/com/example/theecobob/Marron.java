@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class Marron extends AppCompatActivity {
     TextView frasesText;
     ImageButton btn_Generate;
 
+    Button btnHomejuegareciclando;
+
     RecyclerView.Adapter adapter;
 
     @Override
@@ -41,6 +44,8 @@ public class Marron extends AppCompatActivity {
         frasesText = findViewById(R.id.frasesMarron);
         btn_Generate = findViewById(R.id.btnGenerate);
 
+        btnHomejuegareciclando = findViewById(R.id.btnjuegareciclando);
+
         final String frases[] = {
                 "Para reciclar la materia orgánica existen dos opciones posibles: su transformación en compost o en biogás.",
                 "El compost puede aprovecharse como fertilizante e incluso como generador de energía."
@@ -52,6 +57,15 @@ public class Marron extends AppCompatActivity {
                 Random rand= new Random();
                 int Frases= rand.nextInt(2); //Total de frases
                 frasesText.setText(frases[Frases]);
+            }
+        });
+
+        btnHomejuegareciclando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Marron.this, CategoryMain.class);
+                startActivity(intentHome);
+                finish();
             }
         });
 

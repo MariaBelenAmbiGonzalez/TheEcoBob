@@ -16,14 +16,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/concert_one"
-            android:padding="8dp"
+            android:fontFamily="@font/bungee"
+            android:padding="0dp"
             android:text="@string/residuos"
             android:textAllCaps="true"
             android:textColor="@color/negro"
             android:layout_marginTop="20dp"
             android:textAlignment="center"
-            android:textSize="40sp" />
+            android:textSize="30sp" />
 
         <RelativeLayout
 
@@ -36,13 +36,14 @@
                 android:background="@drawable/fnegro">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/concert_one"
+                    android:fontFamily="@font/bungee"
                     android:padding="10dp"
                     android:text="@string/plastico"
                     android:textColor="@color/amarillo"
-                    android:textSize="26sp" />
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
 
             <ImageButton
                 android:id="@+id/btnPlastico"
@@ -69,13 +70,14 @@
                 android:background="@drawable/fnegro">
 
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/concert_one"
+                android:fontFamily="@font/bungee"
                 android:padding="10dp"
                 android:text="@string/papel"
                 android:textColor="@color/azul"
-                android:textSize="26sp" />
+                android:textAllCaps="true"
+                android:textSize="25sp" />
 
             <ImageButton
                 android:id="@+id/btnPapel"
@@ -102,13 +104,14 @@
                 android:background="@drawable/fnegro">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/concert_one"
+                    android:fontFamily="@font/bungee"
                     android:padding="10dp"
                     android:text="@string/vidrio"
                     android:textColor="@color/verde"
-                    android:textSize="26sp" />
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
 
                 <ImageButton
                     android:id="@+id/btnVidrio"
@@ -135,13 +138,15 @@
                 android:background="@drawable/fnegro">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/concert_one"
+                    android:fontFamily="@font/bungee"
                     android:padding="10dp"
                     android:text="@string/orgánico"
                     android:textColor="@color/marron"
-                    android:textSize="26sp" />
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+
 
                 <ImageButton
                     android:id="@+id/btnOrganico"
@@ -168,13 +173,14 @@
                 android:background="@drawable/fnegro">
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/concert_one"
+                    android:fontFamily="@font/bungee"
                     android:padding="10dp"
                     android:text="@string/resto"
                     android:textColor="#BCBABA"
-                    android:textSize="26sp" />
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
 
                 <ImageButton
                     android:id="@+id/btnResto"

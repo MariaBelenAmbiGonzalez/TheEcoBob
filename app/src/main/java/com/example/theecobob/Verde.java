@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class Verde extends AppCompatActivity {
     TextView frasesText;
     ImageButton btn_Generate;
 
+    Button btnHomejuegareciclando;
+
 
     RecyclerView.Adapter adapter;
 
@@ -39,8 +42,10 @@ public class Verde extends AppCompatActivity {
         //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         featuredRecycler2 = findViewById(R.id.featured_recycler2);
+
         frasesText=findViewById(R.id.frasesVerde);
         btn_Generate=findViewById(R.id.btnGenerate);
+        btnHomejuegareciclando = findViewById(R.id.btnjuegareciclando);
 
         final String frases[]={
                 "El vidrio es 100% reciclable y se puede utilizar una y otra vez.",
@@ -57,6 +62,15 @@ public class Verde extends AppCompatActivity {
                 Random rand= new Random();
                 int Frases= rand.nextInt(7); //Total de frases
                 frasesText.setText(frases[Frases]); }
+        });
+
+        btnHomejuegareciclando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentHome = new Intent (Verde.this, CategoryMain.class);
+                startActivity(intentHome);
+                finish();
+            }
         });
 
         //Llamamos a los métodos
